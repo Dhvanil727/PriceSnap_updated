@@ -1,0 +1,486 @@
+
+  /* Homepage.css */
+ 
+/*  
+.maindiv{
+  padding: 10px;
+  gap: 20px;
+  display: grid;  
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.product-card a {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.product-card a:hover {
+  background-color: #0056b3;
+}
+h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+} */
+
+/* Homepage.css */
+.maindiv {
+  padding: 20px;
+}
+
+.category-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  max-width: 300px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.product-card a {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.product-card a:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+h3{
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/* Homepage.css */
+
+/* Existing styles remain unchanged */
+
+#image {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/images/image.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially transparent */
+  animation: fade-in 3s forwards; /* Animation for fading in the image */
+  z-index: -1;
+  transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out; /* Add transition for smooth animation */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#image:hover::before {
+  background-image: url('../../public/images/image2.jpg'); /* Use image2.jpg as the overlay */
+  opacity: 1; /* Make the overlay fully visible on hover */
+}
+
+#image:hover::after {
+  content: 'WELCOME TO PRICE SNAP';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-20%);
+  color: rgb(255, 255, 255);
+  font-size: 44px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0; /* Initially transparent */
+  animation: fade-in-drop 2.5s forwards; /* Animation for fading in and dropping down the text */
+  z-index: 100;
+}
+
+@keyframes fade-in-drop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#image:hover .button-container {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button-container {
+  position: absolute;
+  width: 150px;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.button-container button {
+  background-color: #6e79858e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* .category-heading {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  padding: 100px; 
+  background-color: #000000; 
+  border-radius: 5px; 
+  display: inline-block; 
+} */
+
+#sp {
+  margin: auto; /* Center the heading */
+  width: fit-content; /* Adjust the width based on the content */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: #333 solid thin;
+  border-radius: 0.5rem;
+
+}
+
+
+
+
+
+#image3 {
+  padding-top:10rem;
+  margin-top: 2rem;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#image3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/images/image3.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially transparent */
+  animation: fade-in 3s forwards; /* Animation for fading in the image */
+  z-index: -1;
+  transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out; /* Add transition for smooth animation */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#image3:hover::before {
+  background-image: url('../../public/images/image4.jpg'); /* Use image2.jpg as the overlay */
+  opacity: 1; /* Make the overlay fully visible on hover */
+}
+
+#image3:hover::after {
+  content: 'Feel the sound';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-20%);
+  color: rgb(255, 255, 255);
+  font-size: 44px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0; /* Initially transparent */
+  animation: fade-in-drop 2.5s forwards; /* Animation for fading in and drdown the text */
+  z-index: 100;
+}
+
+@keyframes fade-in-drop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#image3:hover .button-container2 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button-container2 {
+  position: absolute;
+  width: 150px;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.button-container2 button {
+  background-color: #ff000080;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+#eb {
+  margin: auto; /* Center the heading */
+  width: fit-content; /* Adjust the width based on the content */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: #333 solid thin;
+  border-radius: 0.5rem;
+
+}
+
+#earbuds{
+  padding-bottom: 2rem;
+}
+
+
+#image4 {
+  padding-top:10rem;
+  margin-top: 2rem;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#image4::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/images/laptop.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Initially transparent */
+  animation: fade-in 3s forwards; /* Animation for fading in the image */
+  z-index: -1;
+  transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out; /* Add transition for smooth animation */
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#image4:hover::before {
+  background-image: url('../../public/images/laptop2.jpg'); /* Use image2.jpg as the overlay */
+  opacity: 1; /* Make the overlay fully visible on hover */
+}
+
+#image4:hover::after {
+  content: 'Unleash your productivity';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-20%);
+  color: rgb(255, 255, 255);
+  font-size: 44px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0; /* Initially transparent */
+  animation: fade-in-drop 2.5s forwards; /* Animation for fading in and drdown the text */
+  z-index: 100;
+}
+
+@keyframes fade-in-drop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#image4:hover .button-container3 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button-container3 {
+  position: absolute;
+  width: 150px;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.button-container3 button {
+  background-color: #ff000080;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+#lp {
+  margin: auto; /* Center the heading */
+  width: fit-content; /* Adjust the width based on the content */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: #333 solid thin;
+  border-radius: 0.5rem;
+
+}
+
+#laptop{
+  padding-bottom: 2rem;
+}

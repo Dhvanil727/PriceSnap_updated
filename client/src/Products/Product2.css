@@ -1,0 +1,79 @@
+.product-container {
+    text-align: center;
+  }
+  
+  .phone-image {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+  }
+  
+  .phone-details {
+    margin-top: 20px;
+  }
+  
+  .ratings-price {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .ratings-price p {
+    margin: 0 10px;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .amazon-button,
+  .flipkart-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .amazon-button:hover,
+  .flipkart-button:hover {
+    background-color: #e68a00;
+  }
+  
+  @keyframes ring {
+    0% {
+      transform: rotate(0deg);
+      box-shadow: 1px 5px 2px #067caa;
+    }
+    50% {
+      transform: rotate(180deg);
+      box-shadow: 1px 5px 2px #e00798;
+    }
+    100% {
+      transform: rotate(360deg);
+      box-shadow: 1px 5px 2px #04c84f;
+    }
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loading-container {
+    text-align: center;
+  }
+  
+  .loading-ring {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #067caa;
+    animation: ring 1s infinite linear;
+  }
+  
